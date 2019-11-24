@@ -70,13 +70,15 @@ The max value for an integer is 2147483647 and the min is -2147483648
 
 For an integer overflow to occur, then either:
 
+214748364X > 2147483647 or -214748364X < -2147483648 where X is the next digit to add, the remainder. In other words:
+
 the reversed number is bigger than 214748364 and we still have 1 more digit to add or
 
-the reversed number is exactly 214748364 and the digit we are about to add is bigger than 7 (ex 214748364X > 2147483647) or
+the reversed number is exactly 214748364 and the digit we are about to add is bigger than 7 or
 
 the reversed number is smaller than -214748364 and we still have 1 more digit to add or
 
-the reversed number is exactly -214748364 and the digit we are about to add is bigger than 8 (ex -214748364X < -2147483648).
+the reversed number is exactly -214748364 and the digit we are about to add is bigger than 8.
 
 ```
 public int solve(int x) {
